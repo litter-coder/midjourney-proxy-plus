@@ -10,7 +10,7 @@ midjourney-proxy的先行版，采用了全新架构，降低了封号的几率�
 - [x] 支持 Blend(图片混合) 指令和相关动作
 - [x] 支持 Describe(图生文) 指令和相关动作
 - [x] 支持任务实时进度
-- [x] 支持中文 prompt 翻译，需配置百度翻译或 gpt
+- [x] 支持中英文翻译，需配置百度翻译、deepl翻译或gpt
 - [x] prompt 敏感词判断，支持覆盖调整
 - [x] 任务队列，默认队列10，并发3。可参考 [MidJourney订阅级别](https://docs.midjourney.com/docs/plans) 调整mj.queue
 - [x] user-token 连接 wss，可以获取错误信息和完整功能

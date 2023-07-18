@@ -1,0 +1,19 @@
+mj:
+  accounts:
+    - guild-id: xxx
+      channel-id: xxx
+      user-token: xxx
+      session-id: 9c4055428e13bcbf2248a6b36084c5f3
+      user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36
+      remix: false
+  task-store:
+    type: in_memory
+    timeout: 30d
+  translate-way: null
+  queue:
+    timeout-minutes: 5
+    core-size: 3
+    queue-size: 10
+  error-desc:
+    - en: "against our community standards"
+      zh: "可能包含违规信息"
