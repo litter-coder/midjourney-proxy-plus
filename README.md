@@ -9,6 +9,7 @@ midjourney-proxy的先行版，采用了全新架构，降低了封号的几率�
 - [x] 支持 Remix 模式
 - [x] 支持 Blend(图片混合) 指令和相关动作
 - [x] 支持 Describe(图生文) 指令和相关动作
+- [x] 支持 Shorten 指令和相关动作
 - [x] 支持任务实时进度
 - [x] 支持中英文翻译，需配置百度翻译、deepl翻译或gpt
 - [x] prompt 敏感词判断，支持覆盖调整
@@ -19,15 +20,17 @@ midjourney-proxy的先行版，采用了全新架构，降低了封号的几率�
 
 ## 后续计划
 
-- [ ] 多种轮询机制
 - [ ] mj管理后台
-- [ ] ...
+- [ ] 账号持久化存储，实时维护
+- [ ] 账号支持配置各自的队列
+- [ ] 优化账号轮询机制
+- [ ] 实现info、settings等功能
 
 ## 获取方式
 
 扫码获取，备注mj先行版
 
- <img src="https://raw.githubusercontent.com/novicezk/midjourney-proxy/main/docs/manager-qrcode.png" width="220" alt="微信二维码"/>
+ <img src="https://raw.githubusercontent.com/litter-coder/midjourney-proxy-plus/main/docs/manager-qrcode.jpeg" width="240" alt="微信二维码"/>
 
 加入我们即可获得
 
