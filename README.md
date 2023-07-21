@@ -35,6 +35,6 @@ midjourney-proxy的先行版，采用了全新架构，降低了封号的几率�
 加入我们即可获得
 
 - midjourney-proxy的最新版本
-- 微信机器人最新版本
+- [微信机器人最新版本](https://github.com/litter-coder/wechat-ai)
 - 及时维护，出问题优先修复
 - 您的意见和建议会被我们重点采纳

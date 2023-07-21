@@ -10,6 +10,7 @@ mj:
     type: in_memory
     timeout: 30d
   translate-way: null
+  translate-zh-way: null
   queue:
     timeout-minutes: 5
     core-size: 3
