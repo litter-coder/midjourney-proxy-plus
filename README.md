@@ -1,5 +1,5 @@
 # midjourney-proxy-plus
-midjourney-proxy的先行版，采用了全新架构，降低了封号的几率，解决了提示词匹配不准确的问题。
+midjourney-proxy的先行版，采用了全新模式。支持mj所有的指令和相关操作，精准匹配所有提交的任务。
 
 ## 主要功能
 

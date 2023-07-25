@@ -51,6 +51,17 @@
          }
     }
     ```
+- code=24: prompt包含敏感词
+    ```json
+    {
+        "code": 24,
+        "description": "可能包含敏感词",
+        "properties": {
+            "promptEn": "nude body",
+            "bannedWord": "nude"
+         }
+    }
+    ```
 - other: 提交错误，description为错误描述
 
 ## 3. 执行任务的关联动作
@@ -86,8 +97,8 @@ CustomZoom的prompt需要设置`--ar` 和 `--zoom`(1到2之间)，例如: `Cat -
 ## 4. `/mj/submit/describe` 图生文
 ```json
 {
-  // 图片的base64字符串
-  "base64": "data:image/png;base64,xxx"
+    // 图片的base64字符串
+    "base64": "data:image/png;base64,xxx"
 }
 ```
 

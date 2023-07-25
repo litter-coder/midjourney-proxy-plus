@@ -22,7 +22,7 @@
 | mj.ng-discord.server | 否 | https://discord.com 反代地址 |
 | mj.ng-discord.cdn | 否 | https://cdn.discordapp.com 反代地址 |
 | mj.ng-discord.wss | 否 | wss://gateway.discord.gg 反代地址 |
-| mj.translate-way | 否 | 中文prompt翻译方式，可选null(默认)、baidu、gpt、deepl |
+| mj.translate-way | 否 | 中文prompt翻译成英文的方式，可选null(默认)、baidu、gpt、deepl |
 | mj.translate-zh-way | 否 | describe、shorten等结果转中文的方式，可选null(默认)、baidu、gpt、deepl |
 | mj.baidu-translate.appid | 否 | 百度翻译的appid |
 | mj.baidu-translate.app-secret | 否 | 百度翻译的app-secret |
