@@ -16,8 +16,8 @@ docker run -d --name midjourney-proxy \
 ```shell
 docker run -d --name midjourney-proxy \
  -p 8080:8080 \
- -e mj.discord.guild-id=xxx \
- -e mj.discord.channel-id=xxx \
- -e mj.discord.user-token=xxx \
+ -e mj.accounts[0].guild-id=xxx \
+ -e mj.accounts[0].channel-id=xxx \
+ -e mj.accounts[0].user-token=xxx \
  novicezk/midjourney-proxy-pilot:3.0.5
 ```
