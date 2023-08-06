@@ -81,7 +81,7 @@
 - 执行CustomZoom(自定义变焦)
 - 执行PicReader(Describe后选择生图)
 - 执行PromptAnalyzer(Shorten后选择生图)
-- 账号开启了Remix & 配置remix为true & 执行Reroll、Variation、Pan
+- 账号开启了Remix & 执行Reroll、Variation、Pan
 
 调用 `/mj/submit/modal`
 ```json
@@ -121,7 +121,7 @@ CustomZoom的prompt需要设置`--ar` 和 `--zoom`(1到2之间)，例如: `Cat -
 ## 5. `/mj/submit/shorten` prompt分析
 ```json
 {
-  "prompt": "️appdash appdash, in the style of expert draftsmanship, commission for, ethereal, dreamlike quality, dadaistic, toonami"
+    "prompt": "️appdash appdash, in the style of expert draftsmanship, commission for, ethereal, dreamlike quality, dadaistic, toonami"
 }
 ```
 
@@ -154,7 +154,19 @@ CustomZoom的prompt需要设置`--ar` 和 `--zoom`(1到2之间)，例如: `Cat -
 }
 ```
 
-## 6. 任务变更回调
+## 6. 获取任务图片的seed
+绘图任务执行后，不会设置seed，如需获取seed，需要执行 `/mj/task/{id}/image-seed`
+- code=1: 获取成功，result为图片对应的seed
+    ```json
+    {
+      "code": 1,
+      "description": "成功",
+      "result": "636646138"
+    }
+    ```
+- other: 执行错误，description为错误描述
+
+## 7. 任务变更回调
 任务状态变化或进度改变时，会调用业务系统的接口
 - 接口地址为配置的 mj.notify-hook，任务提交时支持传`notifyHook`以改变此任务的回调地址
 - 两者都为空时，不触发回调
