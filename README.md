@@ -25,10 +25,10 @@
 - [x] 账号池持久化，动态维护
 - [x] 每个账号可设置对应的任务队列（参考 [MidJourney订阅级别](https://docs.midjourney.com/docs/plans) 调整）
 - [x] 支持获取账号/info、/settings信息
+- [x] mj管理后台
 
 ## 后续计划
 
-- [ ] mj管理后台
 - [ ] 任务、账号存储支持MySQL
 
 ## 获取方式
@@ -40,6 +40,7 @@
 加入我们即可获得
 
 - midjourney-proxy的最新版本
+- [管理后台](https://github.com/litter-coder/midjourney-proxy-admin)
 - [微信机器人最新版本](https://github.com/litter-coder/wechat-ai)
 - 及时维护，出问题优先修复
 - 您的意见和建议会被我们重点采纳
