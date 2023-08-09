@@ -25,7 +25,7 @@
 - [x] 账号池持久化，动态维护
 - [x] 每个账号可设置对应的任务队列（参考 [MidJourney订阅级别](https://docs.midjourney.com/docs/plans) 调整）
 - [x] 支持获取账号/info、/settings信息
-- [x] mj管理后台
+- [x] 内嵌 [管理后台页面](https://github.com/litter-coder/midjourney-proxy-admin)
 
 ## 后续计划
 
@@ -41,7 +41,26 @@
 加入我们即可获得
 
 - midjourney-proxy的最新版本
-- 内嵌 [管理后台](https://github.com/litter-coder/midjourney-proxy-admin)
 - [微信机器人最新版本](https://github.com/litter-coder/wechat-ai)
 - 及时维护，出问题优先修复
 - 您的意见和建议会被我们重点采纳
+
+## 使用前提
+1. 注册并订阅 MidJourney，创建自己的频道，参考 https://docs.midjourney.com/docs/quick-start
+2. 获取用户Token、服务器ID、频道ID等：[获取方式](./docs/discord-params.md)
+
+## 配置项
+- mj.accounts: 参考 [账号池配置](./docs/config.md#%E8%B4%A6%E5%8F%B7%E6%B1%A0%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83)
+- mj.account-store-type: 账号存储方式，默认in_memory(内存\重启后丢失)，可选redis
+- mj.task-store.type: 任务存储方式，默认in_memory(内存\重启后丢失)，可选redis
+- mj.task-store.timeout: 任务存储过期时间，过期后删除，默认30天
+- mj.api-secret: 接口密钥，为空不启用鉴权；调用接口时需要加请求头 mj-api-secret
+- mj.translate-way: 中文prompt翻译成英文的方式，可选null(默认)、baidu、gpt、deepl
+- mj.translate-zh-way: describe、shorten等结果翻译成中文的方式，可选null(默认)、baidu、gpt、deepl
+- redis、翻译或更多配置查看 [配置项](./docs/config.md)
+
+## 相关文档
+- [部署教程](./docs/start.md)
+- [全部配置项](./docs/config.md)
+- [API接口说明](./docs/api.md)
+- [Release版本jar包地址](https://github.com/litter-coder/midjourney-proxy-plus/releases)

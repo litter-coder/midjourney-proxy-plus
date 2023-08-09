@@ -1,6 +1,6 @@
 # API接口说明
 
-`http://ip:port/mj` 已有api文档，此处仅作补充
+`http://ip:port/doc` 已有api文档，此处仅作补充
 
 ## 1. 数据结构
 

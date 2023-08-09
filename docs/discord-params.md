@@ -19,5 +19,5 @@
 
 ### 4. 获取MJ私信ID
 
-url里取出 私信ID，后续设置到账号的 `mj-bot-channel-id`
+url里取出 私信ID，后续设置到账号的 `mj-bot-channel-id`，获取图片seed功能需要用到
 ![Midjourney @me](bot-me.png)
