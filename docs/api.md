@@ -97,8 +97,8 @@ CustomZoom的prompt需要设置`--ar` 和 `--zoom`(1到2之间)，例如: `Cat -
 ## 4. `/mj/submit/describe` 图生文
 ```json
 {
-    // 图片的base64字符串
-    "base64": "data:image/png;base64,xxx"
+  // 图片的base64字符串
+  "base64": "data:image/png;base64,xxx"
 }
 ```
 
@@ -121,7 +121,7 @@ CustomZoom的prompt需要设置`--ar` 和 `--zoom`(1到2之间)，例如: `Cat -
 ## 5. `/mj/submit/shorten` prompt分析
 ```json
 {
-    "prompt": "️appdash appdash, in the style of expert draftsmanship, commission for, ethereal, dreamlike quality, dadaistic, toonami"
+  "prompt": "️appdash appdash, in the style of expert draftsmanship, commission for, ethereal, dreamlike quality, dadaistic, toonami"
 }
 ```
 
@@ -155,7 +155,11 @@ CustomZoom的prompt需要设置`--ar` 和 `--zoom`(1到2之间)，例如: `Cat -
 ```
 
 ## 6. 获取任务图片的seed
+
 绘图任务执行后，不会设置seed，如需获取seed，需要执行 `/mj/task/{id}/image-seed`
+
+⚠️ 注意: 必须配置账号的Midjourney Bot私信ID，否则无法调用
+
 - code=1: 获取成功，result为图片对应的seed
     ```json
     {

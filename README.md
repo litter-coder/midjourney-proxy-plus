@@ -30,6 +30,7 @@
 ## 后续计划
 
 - [ ] 任务、账号存储支持MySQL
+- [ ] settings设置
 
 ## 获取方式
 
@@ -40,7 +41,7 @@
 加入我们即可获得
 
 - midjourney-proxy的最新版本
-- [管理后台](https://github.com/litter-coder/midjourney-proxy-admin)
+- 内嵌 [管理后台](https://github.com/litter-coder/midjourney-proxy-admin)
 - [微信机器人最新版本](https://github.com/litter-coder/wechat-ai)
 - 及时维护，出问题优先修复
 - 您的意见和建议会被我们重点采纳

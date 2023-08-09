@@ -2,24 +2,23 @@
 
 ### Docker
 
-1. /xxx/xxx/config目录下创建 application.yml(mj配置项)、banned-words.txt(可选，覆盖默认的敏感词文件)；参考resources下的文件
+1. /xxx/xxx/config目录下创建
    > 注意: /xxx/xxx是 服务器目录示例，需自行修改
-2. 启动容器，映射config目录
-```shell
-docker run -d --name midjourney-proxy \
- -p 8080:8080 \
- -v /xxx/xxx/config:/home/spring/config \
- novicezk/midjourney-proxy-pilot:3.1
-```
-3. 访问 `http://ip:port/mj` 查看API文档
-4. 在API文档页获取机器码，联系作者获取激活码，激活服务
+   - `app.jar` 项目jar包，https://github.com/litter-coder/midjourney-proxy-plus/releases 下找到最新的jar包，下载并命名为app.jar
+   - `application.yml` mj配置项，参考 https://github.com/litter-coder/midjourney-proxy-plus/blob/main/resources/application.yml
+   - `banned-words.txt` 非必须，覆盖默认的敏感词文件，参考 https://github.com/litter-coder/midjourney-proxy-plus/blob/main/resources/banned-words.txt
 
-附: 不映射config目录方式，直接在启动命令中设置参数
-```shell
-docker run -d --name midjourney-proxy \
- -p 8080:8080 \
- -e mj.accounts[0].guild-id=xxx \
- -e mj.accounts[0].channel-id=xxx \
- -e mj.accounts[0].user-token=xxx \
- novicezk/midjourney-proxy-pilot:3.1
-```
+2. 启动容器，映射config目录
+    ```shell
+    docker run -d --name midjourney-proxy-plus \
+     -p 8080:8080 \
+     -v /xxx/xxx/config:/home/spring/config \
+     novicezk/plus-jdk17:latest
+    ```
+
+3. 在API文档页 `http://ip:port/doc` 服务激活 -> 获取机器码，联系作者获取激活码，激活服务
+4. 访问 `http://ip:port` 查看管理页面，用户名是admin，密码是设置的接口密钥（未设置默认密码是admin）
+5. 后续升级版本，直接替换config目录下的app.jar，重启容器即可，不需要重新激活
+    ```shell
+    docker restart midjourney-proxy-plus
+    ```

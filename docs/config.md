@@ -36,11 +36,13 @@ mj:
     - guild-id: xxx
       channel-id: xxx
       user-token: xxxx
+      mj-bot-channel-id: xxxx
       session-id: xxxx
       user-agent: xxxx
     - guild-id: xxx
       channel-id: xxx
       user-token: xxxx
+      mj-bot-channel-id: xxxx
       session-id: xxxx
       user-agent: xxxx
 ```
@@ -51,6 +53,7 @@ mj:
 | guild-id | 是 | discord服务器ID |
 | channel-id | 是 | discord频道ID |
 | user-token | 是 | discord用户Token |
+| mj-bot-channel-id | 否 | Midjourney Bot私信ID |
 | session-id | 否 | discord用户SessionId，建议从interactions请求中复制替换掉 |
 | user-agent | 否 | 调用discord接口、连接wss时的user-agent，建议从浏览器network复制 |
 | enable | 否 | 是否可用，默认true |
