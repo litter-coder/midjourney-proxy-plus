@@ -158,7 +158,7 @@ CustomZoom的prompt需要设置`--ar` 和 `--zoom`(1到2之间)，例如: `Cat -
 
 绘图任务执行后，不会设置seed，如需获取seed，需要执行 `/mj/task/{id}/image-seed`
 
-⚠️ 注意: 必须配置账号的Midjourney Bot私信ID，否则无法调用
+⚠️ 注意: 必须配置账号的 [Midjourney Bot私信ID](./discord-params.md#4-获取mj私信id)，否则无法调用
 
 - code=1: 获取成功，result为图片对应的seed
     ```json
