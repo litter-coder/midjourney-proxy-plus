@@ -19,7 +19,7 @@
 - [x] 支持 Blend(图片混合) 指令和相关动作
 - [x] 支持 Describe(图生文) 指令和相关动作
 - [x] 支持 Shorten 指令和相关动作
-- [x] 支持 Remix 模式，参考 [API接口说明](./docs/api.md) 的`/mj/submit/modal`
+- [x] 支持 Remix 模式，参考 [API接口说明](./docs/api.md) 的`/mj/submit/action`
 - [x] 支持获取图片的seed值
 - [x] 中英文翻译额外支持deepl
 - [x] 账号池持久化，动态维护

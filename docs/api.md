@@ -37,7 +37,10 @@
     {
       "code": 1,
       "description": "提交成功",
-      "result": "14001929738841620"
+      "result": "14001929738841620",
+      "properties": {
+          "discordInstanceId": "1118138338562560102"
+      }
     }
     ```
 - code=22: 提交成功，进入队列等待
@@ -47,7 +50,19 @@
         "description": "排队中，前面还有1个任务",
         "result": "14001929738841620",
         "properties": {
-            "numberOfQueues": 1
+            "numberOfQueues": 1,
+            "discordInstanceId": "1118138338562560102"
+         }
+    }
+    ```
+- code=23: 队列已满，请稍后尝试
+    ```json
+    {
+        "code": 23,
+        "description": "队列已满，请稍后尝试",
+        "result": "14001929738841620",
+        "properties": {
+            "discordInstanceId": "1118138338562560102"
          }
     }
     ```
@@ -77,13 +92,21 @@
   "customId": "MJ::JOB::reroll::0::1c6dff5e-5632-40c6-9d4c-afb261705313::SOLO"
 }
 ```
-⚠️ 注意: 某些场景需要modal确认，提交后任务状态会变为MODAL，需调用`/mj/submit/modal`进行二次提交
+⚠️ 注意: 某些场景需要modal弹框确认
 - 执行CustomZoom(自定义变焦)
 - 执行PicReader(Describe后选择生图)
 - 执行PromptAnalyzer(Shorten后选择生图)
 - 账号开启了Remix & 执行Reroll、Variation、Pan
 
-调用 `/mj/submit/modal`
+这时返回的code为 21，示例:
+```json
+{
+  "code": 21,
+  "description": "窗口等待",
+  "result": "14001929738841620"
+}
+```
+该任务状态为MODAL，但不会进队列影响并发。需调用`/mj/submit/modal`提交最终任务
 ```json
 {
   // 需确认的任务ID
@@ -92,13 +115,13 @@
   "prompt": "Cat"
 }
 ```
-CustomZoom的prompt需要设置`--ar` 和 `--zoom`(1到2之间)，例如: `Cat --ar 1:1 --zoom 1.5`
+CustomZoom的prompt需要设置`--zoom`(1到2之间)，例如: `Cat --zoom 1.5`
 
 ## 4. `/mj/submit/describe` 图生文
 ```json
 {
-  // 图片的base64字符串
-  "base64": "data:image/png;base64,xxx"
+    // 图片的base64字符串
+    "base64": "data:image/png;base64,xxx"
 }
 ```
 
@@ -158,7 +181,7 @@ CustomZoom的prompt需要设置`--ar` 和 `--zoom`(1到2之间)，例如: `Cat -
 
 绘图任务执行后，不会设置seed，如需获取seed，需要执行 `/mj/task/{id}/image-seed`
 
-⚠️ 注意: 必须配置账号的 [Midjourney Bot私信ID](./discord-params.md#4-获取mj私信id)，否则无法调用
+⚠️ 注意: 必须配置账号的Midjourney Bot私信ID，否则无法调用
 
 - code=1: 获取成功，result为图片对应的seed
     ```json

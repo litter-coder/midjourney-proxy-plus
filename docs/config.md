@@ -6,6 +6,8 @@
 | mj.account-store-type | 否 | 账号存储方式，默认in_memory(内存\重启后丢失)，可选redis |
 | mj.account-choose-rule | 否 | 账号选择策略：默认 BestWaitIdleRule(最少等待空闲)、RoundRobinRule(轮循) |
 | mj.api-secret | 否 | 接口密钥，为空不启用鉴权；调用接口时需要加请求头 mj-api-secret |
+| mj.username | 否 | 后台管理登录的用户名 |
+| mj.password | 否 | 后台管理登录的密码，默认为接口密钥(两者均未设置默认admin) |
 | mj.task-store.type | 否 | 任务存储方式，默认in_memory(内存\重启后丢失)，可选redis |
 | mj.task-store.timeout | 否 | 任务存储过期时间，过期后删除，默认30天 |
 | mj.notify-hook | 否 | 全局的任务状态变更回调地址 |
@@ -60,6 +62,7 @@ mj:
 | core-size | 否 | 并发数，默认3 |
 | queue-size | 否 | 等待队列长度，默认10 |
 | timeout-minutes | 否 | 任务超时时间(分钟)，默认5 |
+| remark | 否 | 备注说明 |
 
 ### spring.redis配置参考
 ```yaml
