@@ -1,7 +1,15 @@
-## 部署教程
+## Docker部署教程
 
-### Docker
+### 升级版本
+⚠️ 注意: **不要删除docker容器**
+1. https://github.com/litter-coder/midjourney-proxy-plus/releases 下找到最新版本的app.jar，下载
+2. 替换到config目录下，注意jar文件名需为app.jar
+2. 重启容器，不需要重新激活
+    ```shell
+    docker restart midjourney-proxy-plus
+    ```
 
+### 初次部署
 1. /xxx/xxx/config目录下创建
    > 注意: /xxx/xxx是 服务器目录示例，需自行修改
    - `app.jar` 项目jar包，https://github.com/litter-coder/midjourney-proxy-plus/releases 下找到最新的jar包，下载并命名为app.jar
@@ -18,7 +26,3 @@
 
 3. 在API文档页 `http://ip:port/doc` 服务激活 -> 获取机器码，联系作者获取激活码，激活服务
 4. 访问 `http://ip:port` 查看管理页面，用户名默认是admin，密码默认是设置的接口密钥（未设置默认密码是admin）
-5. 后续升级版本，直接替换config目录下的app.jar，重启容器即可，不需要重新激活
-    ```shell
-    docker restart midjourney-proxy-plus
-    ```
