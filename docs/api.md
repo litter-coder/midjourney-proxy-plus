@@ -1,6 +1,6 @@
 # API接口说明
 
-`http://ip:port/doc` 已有api文档，此处仅作补充
+`http://ip:port/mj` 已有api文档，此处仅作补充
 
 ## 1. 数据结构
 
@@ -8,7 +8,7 @@
 | 字段 | 类型 | 示例 | 描述 |
 |:-----:|:----:|:----|:----|
 | id | string | 1689231405853400 | 任务ID |
-| action | string | IMAGINE | 任务类型: IMAGINE（绘图）、UPSCALE（选中放大）、VARIATION（选中变换）、ZOOM（图片变焦）、PAN（焦点移动）、DESCRIBE（图生文）、BLEAND（图片混合）、SHORTEN（prompt分析） |
+| action | string | IMAGINE | 任务类型: IMAGINE（绘图）、UPSCALE（放大）、VARIATION（变化）、ZOOM（图片变焦）、PAN（焦点移动）、DESCRIBE（图生文）、BLEND（图片混合）、SHORTEN（prompt分析） |
 | status | string | SUCCESS | 任务状态: NOT_START（未启动）、SUBMITTED（已提交处理）、MODAL（窗口等待）、IN_PROGRESS（执行中）、FAILURE（失败）、SUCCESS（成功） |
 | prompt | string | 猫猫 | 提示词 |
 | promptEn | string | Cat | 英文提示词 |
@@ -94,6 +94,7 @@
 ```
 ⚠️ 注意: 某些场景需要modal弹框确认
 - 执行CustomZoom(自定义变焦)
+- 执行️Region(局部重绘)
 - 执行PicReader(Describe后选择生图)
 - 执行PromptAnalyzer(Shorten后选择生图)
 - 账号开启了Remix & 执行Reroll、Variation、Pan
@@ -115,13 +116,14 @@
   "prompt": "Cat"
 }
 ```
-CustomZoom的prompt需要设置`--zoom`(1到2之间)，例如: `Cat --zoom 1.5`
+- CustomZoom的prompt需要设置`--zoom`(1到2之间)，例如: `Cat --zoom 1.5`
+- ️Vary (Region) 需要额外传`maskBase64`: 局部重绘的蒙版base64(底色纯黑，选中区域纯白)
 
 ## 4. `/mj/submit/describe` 图生文
 ```json
 {
-    // 图片的base64字符串
-    "base64": "data:image/png;base64,xxx"
+  // 图片的base64字符串
+  "base64": "data:image/png;base64,xxx"
 }
 ```
 

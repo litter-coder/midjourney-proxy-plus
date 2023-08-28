@@ -15,11 +15,11 @@
 
 ## 先行版功能
 - [x] 支持开源版的所有功能
-- [x] 支持U之后的所有相关动作：Zoom(图片变焦)、Pan(焦点移动) 等
-- [x] 支持 Blend(图片混合) 指令和相关动作
-- [x] 支持 Describe(图生文) 指令和相关动作
-- [x] 支持 Shorten 指令和相关动作
-- [x] 支持 Remix 模式，参考 [API接口说明](./docs/api.md) 的`/mj/submit/action`
+- [x] 支持 Shorten(prompt分析) 指令
+- [x] 支持焦点移动: Pan ⬅️ ➡️ ⬆️ ⬇️
+- [x] 支持图片变焦: Zoom 🔍
+- [x] 支持局部重绘: Vary (Region) 🖌
+- [x] 支持几乎所有的关联按钮动作和🎛️ Remix模式，参考 [API接口说明](./docs/api.md) 的`/mj/submit/action`
 - [x] 支持获取图片的seed值
 - [x] 中英文翻译额外支持deepl
 - [x] 账号池持久化，动态维护
@@ -28,8 +28,8 @@
 - [x] 内嵌 [管理后台页面](https://github.com/litter-coder/midjourney-proxy-admin)
 
 ## 后续计划
-
 - [ ] 任务、账号存储支持MySQL
+- [ ] 取消执行中或排队的任务
 - [ ] settings设置
 
 ## 获取方式
