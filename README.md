@@ -19,7 +19,7 @@
 - [x] 支持焦点移动: Pan ⬅️ ➡️ ⬆️ ⬇️
 - [x] 支持图片变焦: Zoom 🔍
 - [x] 支持局部重绘: Vary (Region) 🖌
-- [x] 支持几乎所有的关联按钮动作和🎛️ Remix模式，参考 [API接口说明](./docs/api.md) 的`/mj/submit/action`
+- [x] 支持几乎所有的关联按钮动作和🎛️ Remix模式，参考 [API接口说明-提交动作](./docs/api.md#3-%E6%89%A7%E8%A1%8C%E4%BB%BB%E5%8A%A1%E7%9A%84%E5%85%B3%E8%81%94%E5%8A%A8%E4%BD%9C)
 - [x] 支持获取图片的seed值
 - [x] 中英文翻译额外支持deepl
 - [x] 账号池持久化，动态维护
