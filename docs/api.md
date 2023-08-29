@@ -97,9 +97,10 @@
 - 执行️Region(局部重绘)
 - 执行PicReader(Describe后选择生图)
 - 执行PromptAnalyzer(Shorten后选择生图)
-- 账号开启了Remix & 执行Reroll、Variation、Pan
 
-这时返回的code为 21，示例:
+> 开启Remix模式时，执行Reroll、Variation、Pan也需要弹框确认；但账号设置了remix自动提交时，不需要确认
+
+需要确认时返回的code为 21，示例:
 ```json
 {
   "code": 21,

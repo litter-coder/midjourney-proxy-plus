@@ -48,18 +48,19 @@ mj:
 ```
 账号字段说明
 
-| 名称 | 非空 | 描述 |
-| :-----| :----: | :---- |
-| guild-id | 是 | discord服务器ID |
-| channel-id | 是 | discord频道ID |
-| user-token | 是 | discord用户Token |
-| mj-bot-channel-id | 否 | Midjourney Bot私信ID |
-| user-agent | 否 | 调用discord接口、连接wss时的user-agent，建议从浏览器network复制 |
-| enable | 否 | 是否可用，默认true |
-| core-size | 否 | 并发数，默认3 |
-| queue-size | 否 | 等待队列长度，默认10 |
-| timeout-minutes | 否 | 任务超时时间(分钟)，默认5 |
-| remark | 否 | 备注说明 |
+| 名称                | 非空 | 描述                                                                  |
+|:------------------| :----: |:--------------------------------------------------------------------|
+| guild-id          | 是 | discord服务器ID                                                        |
+| channel-id        | 是 | discord频道ID                                                         |
+| user-token        | 是 | discord用户Token                                                      |
+| mj-bot-channel-id | 否 | Midjourney Bot私信ID                                                  |
+| user-agent        | 否 | 调用discord接口、连接wss时的user-agent，建议从浏览器network复制                       |
+| enable            | 否 | 是否可用，默认true                                                         |
+| remix-auto-submit | 否 | remix自动提交(默认false)，共享账号无法自主控制remix模式时使用，自动提交reroll、variation、pan的弹框 |
+| core-size         | 否 | 并发数，默认3                                                             |
+| queue-size        | 否 | 等待队列长度，默认10                                                         |
+| timeout-minutes   | 否 | 任务超时时间(分钟)，默认5                                                      |
+| remark            | 否 | 备注说明                                                                |
 
 ### spring.redis配置参考
 ```yaml
