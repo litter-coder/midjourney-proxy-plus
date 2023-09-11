@@ -24,12 +24,13 @@
 - [x] 中英文翻译额外支持deepl
 - [x] 账号池持久化，动态维护
 - [x] 支持获取账号/info、/settings信息
+- [x] 账号settings设置
 - [x] 内嵌 [管理后台页面](https://github.com/litter-coder/midjourney-proxy-admin)
+
 
 ## 后续计划
 - [ ] 任务、账号存储支持MySQL
 - [ ] 取消执行中或排队的任务
-- [ ] settings设置
 
 ## 获取方式
 
