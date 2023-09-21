@@ -30,9 +30,13 @@
 
 ## 获取方式
 
-扫码获取，备注mj先行版
+微信扫码获取，备注mj先行版
 
  <img src="https://raw.githubusercontent.com/litter-coder/midjourney-proxy-plus/main/docs/manager-qrcode.jpeg" width="240" alt="微信二维码"/>
+
+Telegram
+
+ <img src="https://raw.githubusercontent.com/litter-coder/midjourney-proxy-plus/main/docs/telegram-qrcode.png" width="240" alt="Telegram二维码"/>
 
 加入我们即可获得
 
