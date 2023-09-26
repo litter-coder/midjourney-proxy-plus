@@ -74,6 +74,14 @@ spring:
 
 ### mysql配置参考
 
+```shell
+# 启动myql服务
+docker run --name mysql8 --restart=always -p 3306:3306 -e MYSQL_ROOT_PASSWORD=novice123 -d mysql:8.0.23
+# 连接mysql
+mysql  -uroot -pnovice123
+# 创建数据库，字符编码需为utf8mb4
+create database `mj_proxy` character set utf8mb4 collate utf8mb4_bin;
+```
 > 需要mysql8.0以上版本，注意用户名字段为 user
 ```yaml
 spring:
@@ -81,7 +89,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/mj_proxy?serverTimezone=Asia/Shanghai&characterEncoding=utf-8&allowPublicKeyRetrieval=true&useSSL=false
     user: root
-    password: novice@123
+    password: novice123
 ```
 
 ### mj.error-desc配置参考
