@@ -2,7 +2,7 @@
 
 ### 升级版本
 ⚠️ 注意: **不要删除docker容器**
-1. https://github.com/litter-coder/midjourney-proxy-plus/releases 下找到最新版本的app.jar，下载
+1. 获取最新版本的app.jar
 2. 替换到config目录下，注意jar文件名需为app.jar
 2. 重启容器，不需要重新激活
     ```shell
@@ -12,7 +12,7 @@
 ### 初次部署
 1. /xxx/xxx/config目录下创建
    > 注意: /xxx/xxx是 服务器目录示例，需自行修改
-   - `app.jar` 项目jar包，https://github.com/litter-coder/midjourney-proxy-plus/releases 下找到最新的jar包，下载并命名为app.jar
+   - `app.jar` 最新的jar包，下载并命名为app.jar
    - `application.yml` mj配置项，参考 https://github.com/litter-coder/midjourney-proxy-plus/blob/main/resources/application.yml
    - `banned-words.txt` 非必须，覆盖默认的敏感词文件，参考 https://github.com/litter-coder/midjourney-proxy-plus/blob/main/resources/banned-words.txt
 
