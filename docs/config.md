@@ -9,6 +9,7 @@
 | mj.api-secret                 | 否 | 接口密钥，为空不启用鉴权；调用接口时需要加请求头 mj-api-secret                                                                       |
 | mj.username                   | 否 | 后台管理登录的用户名                                                                                                   |
 | mj.password                   | 否 | 后台管理登录的密码，默认为接口密钥(两者均未设置默认admin)                                                                             |
+| mj.admin-image-prefix         | 否 | admin管理页图片前缀，可设置 `https://wsrv.nl/?url=` 等反代discord图片                                                        |
 | mj.task-store.type            | 否 | 任务存储方式，默认in_memory(内存\重启后丢失)，可选redis、mysql                                                                   |
 | mj.task-store.timeout         | 否 | 任务存储过期时间，过期后删除，默认30天                                                                                         |
 | mj.notify-hook                | 否 | 全局的任务状态变更回调地址                                                                                                |
@@ -16,8 +17,9 @@
 | mj.proxy.host                 | 否 | 代理host，全局代理不生效时设置                                                                                            |
 | mj.proxy.port                 | 否 | 代理port，全局代理不生效时设置                                                                                            |
 | mj.ng-discord.server          | 否 | https://discord.com 反代地址                                                                                     |
-| mj.ng-discord.mj-says-server  | 否 | https://936929561302675456.discordsays.com 反代，用于局部重绘                                                         |
 | mj.ng-discord.cdn             | 否 | https://cdn.discordapp.com 反代地址                                                                              |
+| mj.ng-discord.mj-says-server  | 否 | https://936929561302675456.discordsays.com 反代，用于局部重绘(该地址可能不需要反代，先自行测试)                                       |
+| mj.ng-discord.upload-server   | 否 | https://discord-attachments-uploads-prd.storage.googleapis.com 反代，用于上传文件                                     |
 | mj.ng-discord.wss             | 否 | wss://gateway.discord.gg 反代地址                                                                                |
 | mj.ng-discord.resume-wss      | 否 | wss://gateway-us-east1-b.discord.gg 反代地址                                                                     |
 | mj.translate-way              | 否 | 中文prompt翻译成英文的方式，可选null(默认)、baidu、gpt、deepl                                                                  |

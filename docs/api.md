@@ -5,31 +5,40 @@
 ## 1. 数据结构
 
 ### 任务
-| 字段 | 类型 | 示例 | 描述 |
-|:-----:|:----:|:----|:----|
-| id | string | 1689231405853400 | 任务ID |
-| action | string | IMAGINE | 任务类型: IMAGINE（绘图）、UPSCALE（放大）、VARIATION（变化）、ZOOM（图片变焦）、PAN（焦点移动）、DESCRIBE（图生文）、BLEND（图片混合）、SHORTEN（prompt分析） |
-| status | string | SUCCESS | 任务状态: NOT_START（未启动）、SUBMITTED（已提交处理）、MODAL（窗口等待）、IN_PROGRESS（执行中）、FAILURE（失败）、SUCCESS（成功） |
-| prompt | string | 猫猫 | 提示词 |
-| promptEn | string | Cat | 英文提示词 |
-| description | string | /imagine 猫猫 | 任务描述 |
-| submitTime | number | 1689231405854 | 提交时间 |
-| startTime | number | 1689231442755 | 开始执行时间 |
-| finishTime | number | 1689231544312 | 结束时间 |
-| progress | string | 100% | 任务进度 |
-| imageUrl | string | https://cdn.discordapp.com/attachments/xxx/xxx/xxxx.png | 生成图片的url, 成功或执行中时有值，可能为png或webp |
-| failReason | string | [Invalid parameter] Invalid value | 失败原因, 失败时有值 |
-| properties | object | {"finalPrompt": "Cat"} | 任务的扩展属性，系统内部使用 |
-| buttons | Button[] | [] | 任务完成后的可执行按钮 |
+| 字段 | 类型 | 示例 | 描述                                                                                                                           |
+|:-----:|:----:|:----|:-----------------------------------------------------------------------------------------------------------------------------|
+| id | string | 1689231405853400 | 任务ID                                                                                                                         |
+| action | string | IMAGINE | 任务类型: IMAGINE（绘图）、UPSCALE（放大）、VARIATION（变化）、ZOOM（图片变焦）、PAN（焦点移动）、DESCRIBE（图生文）、BLEND（图片混合）、SHORTEN（prompt分析）、SWAP_FACE（人脸替换） |
+| status | string | SUCCESS | 任务状态: NOT_START（未启动）、SUBMITTED（已提交处理）、MODAL（窗口等待）、IN_PROGRESS（执行中）、FAILURE（失败）、SUCCESS（成功）、CANCEL（已取消）                    |
+| prompt | string | 猫猫 | 提示词                                                                                                                          |
+| promptEn | string | Cat | 英文提示词                                                                                                                        |
+| description | string | /imagine 猫猫 | 任务描述                                                                                                                         |
+| submitTime | number | 1689231405854 | 提交时间                                                                                                                         |
+| startTime | number | 1689231442755 | 开始执行时间                                                                                                                       |
+| finishTime | number | 1689231544312 | 结束时间                                                                                                                         |
+| progress | string | 100% | 任务进度                                                                                                                         |
+| imageUrl | string | https://cdn.discordapp.com/attachments/xxx/xxx/xxxx.png | 生成图片的url, 成功或执行中时有值，可能为png或webp                                                                                              |
+| failReason | string | [Invalid parameter] Invalid value | 失败原因, 失败时有值                                                                                                                  |
+| properties | object | {"finalPrompt": "Cat"} | 任务的扩展属性，系统内部使用                                                                                                               |
+| buttons | Button[] | [] | 任务完成后的可执行按钮                                                                                                                  |
 
 ### Button
-| 字段 | 类型 | 示例 | 描述 |
-|:-----:|:----:|:----|:----|
+| 字段       | 类型 | 示例 | 描述 |
+|:---------|:----:|:----|:----|
 | customId | string | MJ::JOB::upsample::1::85a4b4c1-8835-46c5-a15c-aea34fad1862 | 动作标识 |
-| emoji | string | 🪄 | 图标 |
-| label | string | Make Variations | 文本 |
-| type | number | 2 | 类型，系统内部使用 |
-| style | number | 2 | 样式: 2（Primary）、3（Green） |
+| emoji    | string | 🪄 | 图标 |
+| label    | string | Make Variations | 文本 |
+| type     | number | 2 | 类型，系统内部使用 |
+| style    | number | 2 | 样式: 2（Primary）、3（Green） |
+
+### properties 常见字段
+| 字段             | 类型 | 示例                                        | 描述                                           |
+|:---------------|:----:|:------------------------------------------|:---------------------------------------------|
+| botType           | string | NIJI_JOURNEY                              | bot类型: MID_JOURNEY,NIJI_JOURNEY,INSIGHT_FACE |
+| discordInstanceId  | string | 1118138338562560102                       | 执行该任务的实例ID(频道ID)                             |
+| finalPrompt    | string | Cat                                       | 消息内容提取出的prompt                               |
+| messageId      | string | 1174910863984033903                       | 消息ID                                         |
+| messageContent | string | `**Cat** - Image #1 <@590422081204912129>` | 消息内容                                         |
 
 ## 2. 任务提交返回
 - code=1: 提交成功，result为任务ID
