@@ -46,6 +46,10 @@ Telegram
 - 及时维护，出问题优先修复
 - 您的意见和建议会被我们重点采纳
 
+## 应用项目
+- [wechat-ai](https://github.com/litter-coder/wechat-ai) : 基于 chatgpt-on-wechat 和 midjourney-proxy-plus 的微信智能机器人
+- [chatgpt-web-midjourney-proxy](https://github.com/Dooy/chatgpt-web-midjourney-proxy) : chatgpt web, midjourney, gpts,tts, whisper 一套ui全搞定
+
 ## 使用前提
 1. 注册并订阅 MidJourney，创建自己的频道，参考 https://docs.midjourney.com/docs/quick-start
 2. 获取用户Token、服务器ID、频道ID等：[获取方式](./docs/discord-params.md)
