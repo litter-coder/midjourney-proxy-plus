@@ -94,6 +94,9 @@ spring:
     url: jdbc:mysql://localhost:3306/mj_proxy?serverTimezone=Asia/Shanghai&characterEncoding=utf-8&allowPublicKeyRetrieval=true&useSSL=false
     user: root
     password: novice123
+    initial-size: 20
+    min-idle: 10
+    max-active: 50
 ```
 
 ### mj.error-desc配置参考
