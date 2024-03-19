@@ -60,6 +60,7 @@ Join us to receive
 ## Application Project
 - [wechat-ai](https://github.com/litter-coder/wechat-ai) : A WeChat smart bot based on chatgpt-on-wechat and midjourney-proxy-plus
 - [chatgpt-web-midjourney-proxy](https://github.com/Dooy/chatgpt-web-midjourney-proxy) : chatgpt web, midjourney, gpts,tts, whisper A complete UI solution
+- [new-api](https://github.com/Calcium-Ion/new-api) : An API interface management and distribution system compatible with the Midjourney Proxy (Plus)
 
 ## Prerequisites for use
 1. Register and subscribe to MidJourney, create your own channel, refer to https://docs.midjourney.com/docs/quick-start
