@@ -33,7 +33,7 @@
 - [x] 账号、任务存储支持内存、Redis、MySQL
 - [x] 支持获取账号/info、/settings信息，更改settings设置
 - [x] 支持取消等待、进行中的任务
-- [x] 内嵌管理后台页面: 支持账号维护、任务查看、绘图测试等
+- [x] 内嵌 [管理后台](https://github.com/litter-coder/midjourney-proxy-admin): 支持账号维护、任务查看、绘图测试等
 - [x] 支持MJ V6.0以及cerf等最新参数操作
 - [x] mj账号订阅过期或被封后，自动禁用
 - [x] mj账号快速时长消耗完后，自动切换为relax模式

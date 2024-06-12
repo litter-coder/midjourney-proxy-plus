@@ -4,7 +4,7 @@
 |:------------------------------| :----: |:-------------------------------------------------------------------------------------------------------------|
 | mj.accounts                   | 是 | 参考 [账号池配置](./config.md#%E8%B4%A6%E5%8F%B7%E6%B1%A0%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83)，配置后不需要额外设置mj.discord |
 | mj.account-store-type         | 否 | 账号存储方式，默认in_memory(内存\重启后丢失)，可选redis、mysql                                                                   |
-| mj.account-choose-rule        | 否 | 账号选择策略：默认 BestWaitIdleRule(最少等待)、RoundRobinRule(轮循)                                                          |
+| mj.account-choose-rule        | 否 | 账号选择策略：默认 BestWaitIdleRule(最少等待)、RoundRobinRule(轮循)、WeightedRandomRule(加权随机)                                 |
 | mj.account-sync-cron          | 否 | 账号同步任务的执行时间cron，默认每天20:30执行(0 30 20 * * ?)，设置为0关闭此定时任务                                                       |
 | mj.api-secret                 | 否 | 接口密钥，为空不启用鉴权；调用接口时需要加请求头 mj-api-secret                                                                       |
 | mj.username                   | 否 | 后台管理登录的用户名                                                                                                   |

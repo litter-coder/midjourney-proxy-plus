@@ -33,7 +33,7 @@ The plus version of [midjourney-proxy](https://github.com/novicezk/midjourney-pr
 - [x] Account and task storage support for in-memory, Redis, MySQL
 - [x] Supports retrieving account /info and /settings information, and changing settings configurations
 - [x] Supports canceling tasks that are waiting or in progress
-- [x] Embedded management dashboard page: Supports account maintenance, task viewing, drawing tests, etc
+- [x] Embedded [management dashboard](https://github.com/litter-coder/midjourney-proxy-admin): Supports account maintenance, task viewing, drawing tests, etc
 - [x] Supports MJ V6.0 and other latest parameter operations such as 'cerf'
 - [x] Automatically disable when the MJ account subscription expires or is banned
 - [x] Automatically switch to relax mode after the quick duration of the MJ account is consumed
