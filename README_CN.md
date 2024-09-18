@@ -61,6 +61,7 @@ Telegram
 - [wechat-ai](https://github.com/litter-coder/wechat-ai) : 基于 chatgpt-on-wechat 和 midjourney-proxy-plus 的微信智能机器人
 - [chatgpt-web-midjourney-proxy](https://github.com/Dooy/chatgpt-web-midjourney-proxy) : chatgpt web, midjourney, gpts,tts, whisper 一套ui全搞定
 - [new-api](https://github.com/Calcium-Ion/new-api) : 接入Midjourney Proxy (Plus)的接口管理 & 分发系统
+- [midjourney-captcha-bot](https://github.com/ye4241/midjourney-captcha-bot) : 绕过Midjourney验证码
 
 ## 使用前提
 1. 注册并订阅 MidJourney，创建自己的频道，参考 https://docs.midjourney.com/docs/quick-start
