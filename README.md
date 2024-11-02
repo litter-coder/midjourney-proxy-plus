@@ -39,6 +39,7 @@ The plus version of [midjourney-proxy](https://github.com/novicezk/midjourney-pr
 - [x] Automatically switch to relax mode after the quick duration of the MJ account is consumed
 - [x] Supports [niji・journey Bot](https://discord.com/invite/nijijourney), must be added to your own server
 - [x] Supports [InsightFace Bot](https://discord.com/api/oauth2/authorize?client_id=1090660574196674713&permissions=274877945856&scope=bot)
+- [x] Backend supports dynamic configuration
 
 ## Acquisition Method
 

@@ -39,6 +39,7 @@
 - [x] mj账号快速时长消耗完后，自动切换为relax模式
 - [x] 支持 [niji・journey Bot](https://discord.com/invite/nijijourney)，需加入自己的服务器
 - [x] 支持 [InsightFace 人脸服务](https://discord.com/api/oauth2/authorize?client_id=1090660574196674713&permissions=274877945856&scope=bot)
+- [x] 后台支持动态配置 
 
 ## 获取方式
 
