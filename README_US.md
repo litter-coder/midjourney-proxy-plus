@@ -43,6 +43,7 @@ The plus version of [midjourney-proxy](https://github.com/novicezk/midjourney-pr
 - [x] Resolves the issue of frequent token disconnections
 - [x] Supports automatic pop-up verification
 - [x] Supports automatic appeal for prohibited word 'Action needed to continue'
+- [x] Supports the latest MidJourney V7 Alpha version
 
 ## Acquisition Method
 
